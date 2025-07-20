@@ -51,9 +51,9 @@ const Hero = () => {
               Support Our Mission
             </Button>
             <Button 
-              variant="outline" 
+              variant="hero"
               size="lg"
-              className="border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg backdrop-blur-sm transition-all duration-300 hover:scale-105"
+              className="font-semibold px-8 py-6 text-lg transition-all duration-300 hover:scale-105"
             >
               Join as Volunteer
               <ArrowRight className="ml-2 h-5 w-5" />
