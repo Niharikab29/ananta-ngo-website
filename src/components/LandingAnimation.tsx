@@ -72,7 +72,7 @@ const LandingAnimation = () => {
             <p className={`font-lora text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto transition-all duration-800 ease-out delay-500 ${
               showContent ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
             }`}>
-              A better world made easy! Get tips and resources to live sustainably. Join the growing green living community.
+              A circle of women regenerating the future — one tree, one child, one act of leadership at a time
             </p>
             
             {/* CTA Button - Green style like David Suzuki */}
