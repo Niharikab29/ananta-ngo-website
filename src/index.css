@@ -53,6 +53,9 @@ All colors MUST be HSL.
     --transition-gentle: all 0.3s ease-out;
 
     --radius: 0.5rem;
+    
+    /* Navigation background */
+    --nav-background: 38 26% 95%; /* #f6f3ef */
 
     --sidebar-background: 0 0% 98%;
 
