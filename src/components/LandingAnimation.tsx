@@ -64,7 +64,7 @@ const LandingAnimation = () => {
               showContent ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
             }`}>
               <h1 className="font-cabinet text-4xl md:text-6xl font-light tracking-wide mb-6 leading-tight">
-                A CIRCLE OF WOMEN REGENERATING THE FUTURE — ONE TREE, ONE CHILD, ONE ACT AT A TIME
+                WOMEN GROWING FUTURES
               </h1>
             </div>
             
