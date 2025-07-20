@@ -46,9 +46,31 @@ const ImpactStats = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => {
-          const cardRef = useScrollReveal<HTMLDivElement>();
-          return;
-        })}
+            const cardRef = useScrollReveal<HTMLDivElement>();
+            const countRef = statRefs[index];
+            const Icon = stat.icon;
+            
+            return (
+              <div 
+                key={index}
+                ref={cardRef}
+                className="scroll-reveal text-center p-6 bg-card rounded-lg border shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="mb-4 flex justify-center">
+                  <Icon className={`w-12 h-12 ${stat.color}`} />
+                </div>
+                <div ref={countRef} className="text-4xl font-bold text-foreground mb-2">
+                  {stat.value}
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">
+                  {stat.label}
+                </h3>
+                <p className="text-muted-foreground">
+                  {stat.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>;

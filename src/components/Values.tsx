@@ -47,9 +47,27 @@ const Values = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {values.map((value, index) => {
-          const cardRef = useScrollReveal<HTMLDivElement>();
-          return;
-        })}
+            const cardRef = useScrollReveal<HTMLDivElement>();
+            const Icon = value.icon;
+            
+            return (
+              <div 
+                key={index}
+                ref={cardRef}
+                className="scroll-reveal text-center p-8 bg-card rounded-lg border shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="mb-6 flex justify-center">
+                  <Icon className={`w-16 h-16 ${value.color}`} />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  {value.title}
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>;
