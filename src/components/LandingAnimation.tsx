@@ -94,20 +94,22 @@ const LandingAnimation = () => {
           <div className={`fixed bottom-[10px] left-1/2 transform -translate-x-1/2 z-20 transition-all duration-800 ease-out delay-900 ${
             showContent ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
-            <div 
-              ref={scrollIndicatorRef}
-              onClick={() => {
-                const nextSection = document.getElementById('featured-work');
-                if (nextSection) {
-                  nextSection.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                  });
-                }
-              }}
-              className="scroll-indicator pulse-glow w-20 h-20 rounded-full border-2 border-dashed border-white/60 flex items-center justify-center cursor-pointer hover:border-white/80 hover:scale-105 transition-all duration-300"
-            >
-              <span className="font-cabinet text-white text-sm font-medium tracking-widest uppercase static-text">SCROLL</span>
+            <div className="relative">
+              <div 
+                ref={scrollIndicatorRef}
+                onClick={() => {
+                  const nextSection = document.getElementById('featured-work');
+                  if (nextSection) {
+                    nextSection.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }
+                }}
+                className="scroll-indicator pulse-glow w-20 h-20 rounded-full border-2 border-dashed border-white/60 cursor-pointer hover:border-white/80 hover:scale-105 transition-all duration-300"
+              >
+              </div>
+              <span className="absolute inset-0 flex items-center justify-center font-cabinet text-white text-sm font-medium tracking-widest uppercase pointer-events-none">SCROLL</span>
             </div>
           </div>
         </div>
