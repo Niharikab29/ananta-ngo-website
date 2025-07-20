@@ -6,6 +6,7 @@ const LandingAnimation = () => {
   const scrollIndicatorRef = useScrollIndicatorPulse<HTMLDivElement>();
   const [phase, setPhase] = useState<'initial' | 'content'>('initial');
   const [showContent, setShowContent] = useState(false);
+  const [hideScrollButton, setHideScrollButton] = useState(false);
 
   useEffect(() => {
     // Phase 1: Show hero image for 2 seconds
@@ -21,6 +22,31 @@ const LandingAnimation = () => {
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
+    };
+  }, []);
+
+  // Hide scroll button when Featured Work section is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setHideScrollButton(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const featuredWorkSection = document.getElementById('featured-work');
+    if (featuredWorkSection) {
+      observer.observe(featuredWorkSection);
+    }
+
+    return () => {
+      if (featuredWorkSection) {
+        observer.unobserve(featuredWorkSection);
+      }
     };
   }, []);
 
@@ -91,13 +117,15 @@ const LandingAnimation = () => {
           </div>
           
           {/* Scroll Indicator */}
-          <div className={`fixed bottom-[10px] left-1/2 transform -translate-x-1/2 z-20 transition-all duration-800 ease-out delay-900 ${
-            showContent ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-          }`}>
+          {!hideScrollButton && (
+            <div className={`fixed bottom-[10px] left-1/2 transform -translate-x-1/2 z-20 transition-all duration-800 ease-out delay-900 ${
+              showContent ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            }`}>
             <div className="relative">
               <div 
                 ref={scrollIndicatorRef}
                 onClick={() => {
+                  setHideScrollButton(true);
                   const nextSection = document.getElementById('featured-work');
                   if (nextSection) {
                     nextSection.scrollIntoView({ 
@@ -111,7 +139,8 @@ const LandingAnimation = () => {
               </div>
               <span className="absolute inset-0 flex items-center justify-center font-cabinet text-white text-sm font-medium tracking-widest uppercase pointer-events-none">SCROLL</span>
             </div>
-          </div>
+            </div>
+          )}
         </div>
       </section>
     </div>
