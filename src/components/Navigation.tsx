@@ -41,19 +41,19 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Left side - Logo and Desktop Navigation */}
-          <div className="flex items-center space-x-8">
-            {/* Logo */}
-            <div className="flex items-center">
-              <a href="/" className="hover:opacity-80 transition-opacity">
-                <img 
-                  src="/lovable-uploads/0bfced52-de5f-480f-b199-bd5d951ba6f0.png" 
-                  alt="Ananta Logo"
-                  className="h-16 w-auto"
-                />
-              </a>
-            </div>
+          {/* Left side - Logo */}
+          <div className="flex items-center">
+            <a href="/" className="hover:opacity-80 transition-opacity">
+              <img 
+                src="/lovable-uploads/0bfced52-de5f-480f-b199-bd5d951ba6f0.png" 
+                alt="Ananta Logo"
+                className="h-16 w-auto"
+              />
+            </a>
+          </div>
 
+          {/* Right side - Navigation, Donate Button and Mobile Menu */}
+          <div className="flex items-center space-x-8">
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
@@ -66,12 +66,9 @@ const Navigation = () => {
                 </a>
               ))}
             </div>
-          </div>
 
-          {/* Right side - Donate Button and Mobile Menu */}
-          <div className="flex items-center space-x-4">
             {/* CTA Button - Donate */}
-            <div className="hidden lg:block">
+            <div className="hidden md:block">
               <Button className="font-cabinet bg-red-600 text-white hover:bg-red-700 font-semibold">
                 Donate
               </Button>
@@ -79,7 +76,7 @@ const Navigation = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden"
+              className="md:hidden"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
