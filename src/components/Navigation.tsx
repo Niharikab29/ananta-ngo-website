@@ -16,13 +16,13 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/0bfced52-de5f-480f-b199-bd5d951ba6f0.png" 
               alt="Ananta Logo"
-              className="h-20 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
@@ -51,15 +51,7 @@ const Navigation = () => {
             className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="h-6 w-6" /> : (
-              <div className="w-10 h-10 rounded-full border-2 border-current flex items-center justify-center">
-                <div className="flex flex-col space-y-1">
-                  <div className="w-4 h-0.5 bg-current"></div>
-                  <div className="w-4 h-0.5 bg-current"></div>
-                  <div className="w-4 h-0.5 bg-current"></div>
-                </div>
-              </div>
-            )}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
