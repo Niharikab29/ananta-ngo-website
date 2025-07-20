@@ -31,7 +31,7 @@ const Navigation = () => {
     { label: "Forests", href: "/forests" },
     { label: "Partners", href: "/partners" },
     { label: "Blog", href: "/blog" },
-    { label: "Volunteer", href: "/get-active" },
+    { label: "Get Involved", href: "/get-active" },
     { label: "About", href: "/about" }
   ];
 
