@@ -103,17 +103,6 @@ const LandingAnimation = () => {
               A circle of women regenerating the future — one tree, one child, one act of leadership at a time
             </p>
             
-            {/* CTA Button - Green style like David Suzuki */}
-            <div className={`pt-8 transition-all duration-800 ease-out delay-700 ${
-              showContent ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-            }`}>
-              <Button 
-                size="lg" 
-                className="font-cabinet bg-primary hover:bg-primary/90 text-white font-medium px-12 py-6 text-lg tracking-wider uppercase shadow-soft transition-all duration-300 hover:scale-105"
-              >
-                SIGN UP FOR THE LIVING GREEN MONTHLY DIGEST
-              </Button>
-            </div>
           </div>
           
           {/* Scroll Indicator */}
