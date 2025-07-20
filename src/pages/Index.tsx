@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import LandingAnimation from "@/components/LandingAnimation";
+import AboutSection from "@/components/AboutSection";
 import FeaturedWork from "@/components/FeaturedWork";
 import ImpactStats from "@/components/ImpactStats";
 import Values from "@/components/Values";
@@ -12,6 +13,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <LandingAnimation />
+      <AboutSection />
       <FeaturedWork />
       <ImpactStats />
       <Values />
