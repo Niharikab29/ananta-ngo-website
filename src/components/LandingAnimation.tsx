@@ -60,17 +60,6 @@ const LandingAnimation = () => {
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto space-y-8">
             
-            {/* Logo/Brand - slide from left */}
-            <div className={`transition-all duration-800 ease-out delay-300 ${
-              showContent ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
-            }`}>
-              <img 
-                src="/lovable-uploads/0bfced52-de5f-480f-b199-bd5d951ba6f0.png" 
-                alt="Ananta Foundation Logo" 
-                className="h-24 md:h-32 mx-auto mb-8"
-              />
-            </div>
-            
             {/* Mission Statement - slide from right */}
             <h2 className={`text-2xl md:text-3xl font-medium leading-relaxed opacity-95 transition-all duration-800 ease-out delay-500 ${
               showContent ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'
