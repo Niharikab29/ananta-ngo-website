@@ -28,11 +28,11 @@ const Navigation = () => {
   }, [lastScrollY]);
 
   const navItems = [
-    { label: "Our Work", href: "#work" },
-    { label: "Experts", href: "#experts" },
-    { label: "Take Action", href: "#action" },
-    { label: "Stories", href: "#stories" },
-    { label: "About", href: "#about" }
+    { label: "Forests", href: "/forests" },
+    { label: "Partners", href: "/partners" },
+    { label: "Blog", href: "/blog" },
+    { label: "Get Active", href: "/get-active" },
+    { label: "About", href: "/about" }
   ];
 
   return (
