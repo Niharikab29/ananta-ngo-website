@@ -1,3 +1,4 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Sprout, Globe, Smile, Heart, Home, BarChart3 } from "lucide-react";
 
 const values = [
@@ -40,11 +41,13 @@ const values = [
 ];
 
 const Values = () => {
+  const titleRef = useScrollReveal<HTMLHeadingElement>();
+
   return (
     <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 ref={titleRef} className="scroll-reveal font-cabinet text-4xl md:text-5xl font-bold text-foreground mb-6">
             Our Core Values
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -54,25 +57,28 @@ const Values = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {values.map((value, index) => (
-            <div 
-              key={index}
-              className="group p-8 bg-card rounded-xl shadow-card hover:shadow-soft transition-all duration-300 hover:scale-105 animate-scale-in"
-              style={{animationDelay: `${index * 0.1}s`}}
-            >
-              <div className="text-center space-y-4">
-                <div className={`inline-flex p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300`}>
-                  <value.icon className={`h-8 w-8 ${value.color} group-hover:scale-110 transition-transform duration-300`} />
+          {values.map((value, index) => {
+            const cardRef = useScrollReveal<HTMLDivElement>();
+            return (
+              <div 
+                key={index}
+                ref={cardRef}
+                className={`scroll-reveal-scale delay-${index + 1} group p-8 bg-card rounded-xl shadow-card hover:shadow-soft transition-all duration-300 hover:scale-105`}
+              >
+                <div className="text-center space-y-4">
+                  <div className={`inline-flex p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300`}>
+                    <value.icon className={`h-8 w-8 ${value.color} group-hover:scale-110 transition-transform duration-300`} />
+                  </div>
+                  <h3 className="font-cabinet text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {value.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="font-cabinet text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
-                  {value.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
