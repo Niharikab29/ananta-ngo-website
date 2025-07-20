@@ -273,6 +273,96 @@ html {
   animation: none !important;
 }
 
+/* Forest Animation Keyframes */
+@keyframes breathe {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scaleY(1.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  50% {
+    transform: translateY(-20px) translateX(-3px);
+  }
+  75% {
+    transform: translateY(-8px) translateX(2px);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(-100px) translateY(0);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-20px);
+  }
+  50% {
+    transform: translateX(50vw) translateY(-10px);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-30px);
+  }
+  100% {
+    transform: translateX(120vw) translateY(-15px);
+  }
+}
+
+@keyframes wingFlap {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes fallAndSway {
+  0% {
+    transform: translateY(-20px) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(25vh) translateX(10px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-5px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(75vh) translateX(15px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(120vh) translateX(0) rotate(360deg);
+  }
+}
+
 /* Accessibility: Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .pulse-active,
@@ -284,5 +374,16 @@ html {
   
   .pulse-glow::before {
     display: none;
+  }
+
+  /* Disable forest animations for reduced motion */
+  [class*="animate-[breathe"],
+  [class*="animate-[shimmer"],
+  [class*="animate-[float"],
+  [class*="animate-[sway"],
+  [class*="animate-[flyAcross"],
+  [class*="animate-[wingFlap"],
+  [class*="animate-[fallAndSway"] {
+    animation: none !important;
   }
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 import forestImage from "@/assets/forest-about.jpg";
 
 const AboutSection = () => {
@@ -7,6 +8,8 @@ const AboutSection = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [soundEnabled, setSoundEnabled] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +40,19 @@ const AboutSection = () => {
     handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isVisible]);
+
+  // Handle ambient sound
+  useEffect(() => {
+    if (audioRef.current) {
+      if (soundEnabled && isVisible) {
+        audioRef.current.play().catch(() => {
+          // Audio autoplay blocked, ignore silently
+        });
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  }, [soundEnabled, isVisible]);
 
   const contentBlocks = [
     {
@@ -86,7 +102,7 @@ const AboutSection = () => {
       {/* Fixed Forest Image Container */}
       <div
         ref={imageRef}
-        className={`fixed top-0 left-0 w-full lg:w-[40%] h-screen bg-cover bg-center bg-no-repeat transition-all duration-1000 ${
+        className={`fixed top-0 left-0 w-full lg:w-[40%] h-screen bg-cover bg-center bg-no-repeat transition-all duration-1000 overflow-hidden ${
           isVisible ? "scale-105" : "scale-100"
         }`}
         style={{
@@ -94,8 +110,88 @@ const AboutSection = () => {
           backgroundPosition: `${50 + scrollProgress * 5}% ${50 - scrollProgress * 5}%`,
         }}
       >
+        {/* Ambient breathing overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-green-200/10 to-yellow-200/5 animate-[breathe_8s_ease-in-out_infinite]" />
+        
+        {/* Animated sunbeams */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-10 left-1/4 w-1 h-96 bg-gradient-to-b from-yellow-200/30 to-transparent rotate-12 animate-[shimmer_6s_ease-in-out_infinite] transform origin-top" />
+          <div className="absolute top-16 right-1/3 w-0.5 h-80 bg-gradient-to-b from-yellow-100/25 to-transparent rotate-[-8deg] animate-[shimmer_8s_ease-in-out_infinite] transform origin-top" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-8 left-2/3 w-0.5 h-72 bg-gradient-to-b from-yellow-200/20 to-transparent rotate-6 animate-[shimmer_7s_ease-in-out_infinite] transform origin-top" style={{ animationDelay: '4s' }} />
+        </div>
+
+        {/* Floating particles/pollen */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-yellow-200/40 rounded-full blur-sm animate-[float_10s_ease-in-out_infinite]"
+              style={{
+                left: `${20 + (i * 10)}%`,
+                top: `${30 + (i * 8)}%`,
+                animationDelay: `${i * 1.5}s`,
+                animationDuration: `${8 + (i % 3) * 2}s`
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Foreground leaf layers with parallax */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Layer 1 - Close leaves */}
+          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-green-900/20 to-transparent">
+            <div className="absolute bottom-4 left-8 w-6 h-8 bg-green-700/40 rounded-full transform rotate-12 animate-[sway_4s_ease-in-out_infinite]" />
+            <div className="absolute bottom-8 right-12 w-4 h-6 bg-green-800/30 rounded-full transform rotate-[-15deg] animate-[sway_5s_ease-in-out_infinite]" style={{ animationDelay: '1s' }} />
+          </div>
+          
+          {/* Layer 2 - Mid leaves */}
+          <div className="absolute top-1/3 right-0 w-full h-40">
+            <div className="absolute top-8 right-16 w-3 h-4 bg-green-600/25 rounded-full transform rotate-8 animate-[sway_6s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-20 right-8 w-5 h-7 bg-green-700/20 rounded-full transform rotate-[-12deg] animate-[sway_4.5s_ease-in-out_infinite]" />
+          </div>
+        </div>
+
+        {/* Animated birds */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 animate-[flyAcross_20s_linear_infinite]">
+            <div className="w-2 h-1 bg-gray-800/60">
+              <div className="w-1 h-0.5 bg-gray-800/60 transform rotate-12 animate-[wingFlap_0.5s_ease-in-out_infinite]" />
+              <div className="w-1 h-0.5 bg-gray-800/60 transform rotate-[-12deg] animate-[wingFlap_0.5s_ease-in-out_infinite]" style={{ animationDelay: '0.25s' }} />
+            </div>
+          </div>
+          <div className="absolute top-1/3 animate-[flyAcross_25s_linear_infinite]" style={{ animationDelay: '8s' }}>
+            <div className="w-1.5 h-0.5 bg-gray-700/50">
+              <div className="w-0.5 h-0.5 bg-gray-700/50 transform rotate-8 animate-[wingFlap_0.4s_ease-in-out_infinite]" />
+              <div className="w-0.5 h-0.5 bg-gray-700/50 transform rotate-[-8deg] animate-[wingFlap_0.4s_ease-in-out_infinite]" style={{ animationDelay: '0.2s' }} />
+            </div>
+          </div>
+        </div>
+
+        {/* Falling leaf */}
+        <div className="absolute top-0 left-1/3 animate-[fallAndSway_15s_ease-in-out_infinite]">
+          <div className="w-2 h-3 bg-yellow-600/60 rounded-full transform rotate-45" />
+        </div>
+
         {/* Overlay for better text contrast on mobile */}
         <div className="absolute inset-0 bg-black/20 lg:hidden" />
+
+        {/* Sound toggle button */}
+        <button
+          onClick={() => setSoundEnabled(!soundEnabled)}
+          className="absolute top-4 right-4 lg:top-6 lg:right-6 z-10 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white/80 hover:text-white hover:bg-white/20 transition-all duration-300"
+          aria-label={soundEnabled ? "Mute forest sounds" : "Play forest sounds"}
+        >
+          {soundEnabled ? <Volume2 size={20} /> : <VolumeX size={20} />}
+        </button>
+
+        {/* Hidden audio element */}
+        <audio
+          ref={audioRef}
+          loop
+          preload="none"
+        >
+          <source src="https://www.soundjay.com/misc/sounds/nature-forest-ambience.mp3" type="audio/mpeg" />
+        </audio>
       </div>
 
       {/* Scrolling Content Container */}
