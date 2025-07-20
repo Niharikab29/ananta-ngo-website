@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useContentPulse } from "@/hooks/usePulsatingScroll";
 import { ArrowRight, Leaf, GraduationCap, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -63,11 +64,15 @@ const FeaturedWork = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {projects.map((project, index) => {
             const cardRef = useScrollReveal<HTMLDivElement>();
+            const pulseRef = useContentPulse<HTMLDivElement>();
             return (
               <Card 
                 key={project.id} 
-                ref={cardRef}
-                className={`scroll-reveal-scale delay-${index + 1} group overflow-hidden border-0 shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-2`}
+                ref={(el) => {
+                  cardRef.current = el;
+                  pulseRef.current = el;
+                }}
+                className={`content-pulse scroll-reveal-scale delay-${index + 1} group overflow-hidden border-0 shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-2`}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img 
