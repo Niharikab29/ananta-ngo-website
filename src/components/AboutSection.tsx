@@ -111,66 +111,74 @@ const AboutSection = () => {
         }}
       >
         {/* Ambient breathing overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-200/10 to-yellow-200/5 animate-[breathe_8s_ease-in-out_infinite]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-green-200/5 to-yellow-200/3 animate-[breathe_12s_ease-in-out_infinite]" />
         
-        {/* Animated sunbeams */}
+        {/* Enhanced sunbeams matching the image */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-10 left-1/4 w-1 h-96 bg-gradient-to-b from-yellow-200/30 to-transparent rotate-12 animate-[shimmer_6s_ease-in-out_infinite] transform origin-top" />
-          <div className="absolute top-16 right-1/3 w-0.5 h-80 bg-gradient-to-b from-yellow-100/25 to-transparent rotate-[-8deg] animate-[shimmer_8s_ease-in-out_infinite] transform origin-top" style={{ animationDelay: '2s' }} />
-          <div className="absolute top-8 left-2/3 w-0.5 h-72 bg-gradient-to-b from-yellow-200/20 to-transparent rotate-6 animate-[shimmer_7s_ease-in-out_infinite] transform origin-top" style={{ animationDelay: '4s' }} />
+          {/* Main sunbeam rays - matching the image's central light */}
+          <div className="absolute top-0 left-1/2 w-2 h-full bg-gradient-to-b from-yellow-200/20 via-yellow-100/10 to-transparent transform -translate-x-1/2 rotate-2 animate-[shimmer_8s_ease-in-out_infinite]" />
+          <div className="absolute top-0 left-[45%] w-1.5 h-full bg-gradient-to-b from-yellow-200/15 via-yellow-100/8 to-transparent transform rotate-[-3deg] animate-[shimmer_10s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-0 left-[55%] w-1 h-full bg-gradient-to-b from-yellow-200/12 via-yellow-100/6 to-transparent transform rotate-1 animate-[shimmer_9s_ease-in-out_infinite]" style={{ animationDelay: '4s' }} />
+          
+          {/* Side sunbeams - softer */}
+          <div className="absolute top-10 left-[25%] w-0.5 h-3/4 bg-gradient-to-b from-yellow-200/8 to-transparent rotate-12 animate-[shimmer_12s_ease-in-out_infinite]" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-16 left-[75%] w-0.5 h-2/3 bg-gradient-to-b from-yellow-200/6 to-transparent rotate-[-8deg] animate-[shimmer_11s_ease-in-out_infinite]" style={{ animationDelay: '5s' }} />
         </div>
 
-        {/* Floating particles/pollen */}
+        {/* Floating dust particles in sunbeams */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(12)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-yellow-200/40 rounded-full blur-sm animate-[float_10s_ease-in-out_infinite]"
+              className="absolute w-0.5 h-0.5 bg-yellow-100/30 rounded-full blur-[0.5px] animate-[dustFloat_15s_ease-in-out_infinite]"
               style={{
-                left: `${20 + (i * 10)}%`,
-                top: `${30 + (i * 8)}%`,
-                animationDelay: `${i * 1.5}s`,
-                animationDuration: `${8 + (i % 3) * 2}s`
+                left: `${40 + (i * 2)}%`,
+                top: `${10 + (i * 7)}%`,
+                animationDelay: `${i * 2}s`,
+                animationDuration: `${12 + (i % 4) * 3}s`
               }}
             />
           ))}
         </div>
 
-        {/* Foreground leaf layers with parallax */}
+        {/* Realistic leaf shadows and movement */}
         <div className="absolute inset-0 overflow-hidden">
-          {/* Layer 1 - Close leaves */}
-          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-green-900/20 to-transparent">
-            <div className="absolute bottom-4 left-8 w-6 h-8 bg-green-700/40 rounded-full transform rotate-12 animate-[sway_4s_ease-in-out_infinite]" />
-            <div className="absolute bottom-8 right-12 w-4 h-6 bg-green-800/30 rounded-full transform rotate-[-15deg] animate-[sway_5s_ease-in-out_infinite]" style={{ animationDelay: '1s' }} />
+          {/* Fern-like foreground plants */}
+          <div className="absolute bottom-0 left-[10%] w-8 h-16">
+            <div className="w-full h-full bg-gradient-to-t from-green-800/30 via-green-700/20 to-transparent rounded-t-full animate-[fernSway_6s_ease-in-out_infinite]" />
+          </div>
+          <div className="absolute bottom-0 right-[15%] w-6 h-12">
+            <div className="w-full h-full bg-gradient-to-t from-green-800/25 via-green-700/15 to-transparent rounded-t-full animate-[fernSway_7s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
           </div>
           
-          {/* Layer 2 - Mid leaves */}
-          <div className="absolute top-1/3 right-0 w-full h-40">
-            <div className="absolute top-8 right-16 w-3 h-4 bg-green-600/25 rounded-full transform rotate-8 animate-[sway_6s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
-            <div className="absolute top-20 right-8 w-5 h-7 bg-green-700/20 rounded-full transform rotate-[-12deg] animate-[sway_4.5s_ease-in-out_infinite]" />
-          </div>
+          {/* Branch silhouettes */}
+          <div className="absolute top-[20%] left-[5%] w-20 h-0.5 bg-gradient-to-r from-transparent via-green-900/40 to-transparent animate-[branchSway_8s_ease-in-out_infinite]" />
+          <div className="absolute top-[35%] right-[8%] w-16 h-0.5 bg-gradient-to-r from-transparent via-green-900/30 to-transparent animate-[branchSway_9s_ease-in-out_infinite]" style={{ animationDelay: '3s' }} />
         </div>
 
-        {/* Animated birds */}
+        {/* Realistic birds - small silhouettes */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 animate-[flyAcross_20s_linear_infinite]">
-            <div className="w-2 h-1 bg-gray-800/60">
-              <div className="w-1 h-0.5 bg-gray-800/60 transform rotate-12 animate-[wingFlap_0.5s_ease-in-out_infinite]" />
-              <div className="w-1 h-0.5 bg-gray-800/60 transform rotate-[-12deg] animate-[wingFlap_0.5s_ease-in-out_infinite]" style={{ animationDelay: '0.25s' }} />
-            </div>
+          <div className="absolute top-[25%] animate-[birdFly_25s_linear_infinite]">
+            <svg width="8" height="4" viewBox="0 0 8 4" className="text-gray-800/40">
+              <path d="M0 2 C2 0, 6 0, 8 2 C6 4, 2 4, 0 2 Z" fill="currentColor" />
+            </svg>
           </div>
-          <div className="absolute top-1/3 animate-[flyAcross_25s_linear_infinite]" style={{ animationDelay: '8s' }}>
-            <div className="w-1.5 h-0.5 bg-gray-700/50">
-              <div className="w-0.5 h-0.5 bg-gray-700/50 transform rotate-8 animate-[wingFlap_0.4s_ease-in-out_infinite]" />
-              <div className="w-0.5 h-0.5 bg-gray-700/50 transform rotate-[-8deg] animate-[wingFlap_0.4s_ease-in-out_infinite]" style={{ animationDelay: '0.2s' }} />
-            </div>
+          <div className="absolute top-[40%] animate-[birdFly_30s_linear_infinite]" style={{ animationDelay: '10s' }}>
+            <svg width="6" height="3" viewBox="0 0 6 3" className="text-gray-700/30">
+              <path d="M0 1.5 C1.5 0, 4.5 0, 6 1.5 C4.5 3, 1.5 3, 0 1.5 Z" fill="currentColor" />
+            </svg>
           </div>
         </div>
 
-        {/* Falling leaf */}
-        <div className="absolute top-0 left-1/3 animate-[fallAndSway_15s_ease-in-out_infinite]">
-          <div className="w-2 h-3 bg-yellow-600/60 rounded-full transform rotate-45" />
+        {/* Single falling leaf - realistic shape */}
+        <div className="absolute top-[-10px] left-[35%] animate-[leafFall_20s_ease-in-out_infinite]">
+          <svg width="6" height="8" viewBox="0 0 6 8" className="text-yellow-600/50">
+            <path d="M3 0 C4.5 1, 5 3, 4 5 C3.5 6.5, 2.5 7.5, 3 8 C3.5 7.5, 2.5 6.5, 2 5 C1 3, 1.5 1, 3 0 Z" fill="currentColor" />
+          </svg>
         </div>
+
+        {/* Moss glow on path */}
+        <div className="absolute bottom-0 left-1/2 w-32 h-8 bg-gradient-radial from-green-400/10 via-green-500/5 to-transparent transform -translate-x-1/2 animate-[mossGlow_10s_ease-in-out_infinite]" />
 
         {/* Overlay for better text contrast on mobile */}
         <div className="absolute inset-0 bg-black/20 lg:hidden" />

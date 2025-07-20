@@ -73,6 +73,7 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
