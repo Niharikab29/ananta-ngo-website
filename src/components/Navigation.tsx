@@ -22,7 +22,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/0bfced52-de5f-480f-b199-bd5d951ba6f0.png" 
               alt="Ananta Logo"
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
