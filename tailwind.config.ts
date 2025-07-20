@@ -64,7 +64,6 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'nav-background': 'hsl(var(--nav-background))'
-				}
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
