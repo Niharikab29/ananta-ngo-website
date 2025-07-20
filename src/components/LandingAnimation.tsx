@@ -91,9 +91,9 @@ const LandingAnimation = () => {
           </div>
           
           {/* Scroll Indicator */}
-          <div className={`absolute bottom-3 left-1/2 transform -translate-x-1/2 transition-all duration-800 ease-out delay-900 ${
+          <div className={`absolute left-1/2 transform -translate-x-1/2 transition-all duration-800 ease-out delay-900 ${
             showContent ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-          }`}>
+          } bottom-[10px]`}>
             <div className="flex flex-col items-center space-y-2">
               <div 
                 ref={scrollIndicatorRef}
