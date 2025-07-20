@@ -261,6 +261,14 @@ html {
   }
 }
 
+/* Static text that doesn't pulsate */
+.static-text {
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  animation: none !important;
+}
+
 /* Accessibility: Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .pulse-active,

@@ -107,7 +107,7 @@ const LandingAnimation = () => {
               }}
               className="scroll-indicator pulse-glow w-20 h-20 rounded-full border-2 border-dashed border-white/60 flex items-center justify-center cursor-pointer hover:border-white/80 hover:scale-105 transition-all duration-300"
             >
-              <span className="font-cabinet text-white text-sm font-medium tracking-widest uppercase">SCROLL</span>
+              <span className="font-cabinet text-white text-sm font-medium tracking-widest uppercase static-text">SCROLL</span>
             </div>
           </div>
         </div>
