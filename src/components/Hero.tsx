@@ -16,7 +16,7 @@ const Hero = () => {
           
           
           {/* Mission Statement */}
-          <h2 className="text-2xl md:text-3xl font-medium leading-relaxed opacity-95">
+          <h2 className="font-lora text-2xl md:text-3xl font-medium leading-relaxed opacity-95">
             Reweaving the fabric of local life through 
             <span className="text-accent font-semibold"> ecology</span>, 
             <span className="text-accent font-semibold"> education</span>, and 

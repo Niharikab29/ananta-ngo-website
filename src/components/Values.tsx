@@ -44,7 +44,7 @@ const Values = () => {
     <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-foreground mb-6">
             Our Core Values
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -64,7 +64,7 @@ const Values = () => {
                 <div className={`inline-flex p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300`}>
                   <value.icon className={`h-8 w-8 ${value.color} group-hover:scale-110 transition-transform duration-300`} />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                <h3 className="font-cabinet text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">

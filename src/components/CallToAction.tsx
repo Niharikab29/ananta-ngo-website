@@ -51,7 +51,7 @@ const CallToAction = () => {
     <section className="py-20 bg-gradient-hero text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="font-cabinet text-4xl md:text-5xl font-bold mb-6">
             Join the Movement
           </h2>
           <p className="text-xl leading-relaxed max-w-3xl mx-auto opacity-95">
@@ -73,7 +73,7 @@ const CallToAction = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <h3 className="text-xl font-semibold">
+                  <h3 className="font-cabinet text-xl font-semibold">
                     {item.title}
                   </h3>
                   <p className="text-white/80 leading-relaxed">
@@ -98,7 +98,7 @@ const CallToAction = () => {
         {/* Special Donation Section */}
         <div className="mt-16 text-center animate-fade-in-up" style={{animationDelay: '0.6s'}}>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Tax Benefits Available</h3>
+            <h3 className="font-cabinet text-2xl font-bold mb-4">Tax Benefits Available</h3>
             <p className="text-white/90 mb-6">
               Ananta operates under Lions Club Chhatrapati Sambhaji Nagar with 80G compliance. 
               Every rupee is traceable and accountable.

@@ -32,7 +32,7 @@ const Projects = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-foreground mb-6">
             What We Do
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -56,7 +56,7 @@ const Projects = () => {
                   <div className="p-3 bg-primary/10 rounded-full">
                     <project.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-3xl font-bold text-foreground">
+                  <h3 className="font-cabinet text-3xl font-bold text-foreground">
                     {project.title}
                   </h3>
                 </div>

@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <Sprout className="h-8 w-8 text-accent" />
-              <h3 className="text-2xl font-bold">Ananta</h3>
+              <h3 className="font-cabinet text-2xl font-bold">Ananta</h3>
             </div>
             <p className="text-white/80 leading-relaxed">
               Reweaving the fabric of local life through ecology, education, 
@@ -24,7 +24,7 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold text-accent">Quick Links</h4>
+            <h4 className="font-cabinet text-lg font-semibold text-accent">Quick Links</h4>
             <nav className="space-y-3">
               <a href="#about" className="block text-white/80 hover:text-accent transition-colors duration-200">About Us</a>
               <a href="#projects" className="block text-white/80 hover:text-accent transition-colors duration-200">Our Projects</a>
@@ -36,7 +36,7 @@ const Footer = () => {
           
           {/* Get Involved */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold text-accent">Get Involved</h4>
+            <h4 className="font-cabinet text-lg font-semibold text-accent">Get Involved</h4>
             <nav className="space-y-3">
               <a href="#donate" className="block text-white/80 hover:text-accent transition-colors duration-200">Donate</a>
               <a href="#volunteer" className="block text-white/80 hover:text-accent transition-colors duration-200">Volunteer</a>
@@ -47,7 +47,7 @@ const Footer = () => {
           
           {/* Contact Info */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold text-accent">Contact</h4>
+            <h4 className="font-cabinet text-lg font-semibold text-accent">Contact</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />

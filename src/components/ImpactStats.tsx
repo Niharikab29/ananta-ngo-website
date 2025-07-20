@@ -37,10 +37,10 @@ const ImpactStats = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                 <stat.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground" />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+              <div className="font-cabinet text-3xl md:text-4xl font-bold text-primary mb-2">
                 {stat.number}
               </div>
-              <div className="text-lg font-semibold text-foreground mb-1">
+              <div className="font-cabinet text-lg font-semibold text-foreground mb-1">
                 {stat.label}
               </div>
               <div className="text-sm text-muted-foreground">

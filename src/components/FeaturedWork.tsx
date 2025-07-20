@@ -45,7 +45,7 @@ const FeaturedWork = () => {
             <span className="text-sm tracking-wide uppercase">01</span>
             <span className="text-sm tracking-wide uppercase">Our Work</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-foreground mb-6">
             Reweaving the fabric of local life
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -83,7 +83,7 @@ const FeaturedWork = () => {
                     {project.id} of 03
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="font-cabinet text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
