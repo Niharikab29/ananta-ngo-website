@@ -8,33 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Natural, earthy color palette for Ananta */
+    --background: 42 44% 98%;
+    --foreground: 160 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 160 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 160 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Forest green primary */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 65% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm earth secondary */
+    --secondary: 32 60% 85%;
+    --secondary-foreground: 160 20% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Soft sage muted */
+    --muted: 120 25% 92%;
+    --muted-foreground: 160 12% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Golden accent */
+    --accent: 45 85% 75%;
+    --accent-foreground: 160 25% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 120 20% 88%;
+    --input: 120 20% 88%;
+    --ring: 142 76% 36%;
+
+    /* Custom design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 65% 45%));
+    --gradient-subtle: linear-gradient(180deg, hsl(120 25% 97%), hsl(120 25% 92%));
+    --shadow-soft: 0 4px 20px -4px hsl(142 76% 36% / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(160 15% 15% / 0.08);
+    
+    /* Animation tokens */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.3s ease-out;
 
     --radius: 0.5rem;
 
