@@ -48,10 +48,18 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden"
+            className="lg:hidden w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center hover:bg-foreground/5 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <div className="flex flex-col space-y-1">
+                <div className="w-5 h-0.5 bg-foreground"></div>
+                <div className="w-5 h-0.5 bg-foreground"></div>
+                <div className="w-5 h-0.5 bg-foreground"></div>
+              </div>
+            )}
           </button>
         </div>
 
