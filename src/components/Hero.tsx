@@ -20,11 +20,12 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
           
           {/* Logo/Brand */}
-          <div className="flex items-center justify-center space-x-3 mb-6">
-            <Sprout className="h-12 w-12 text-accent animate-gentle-bounce" />
-            <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
-              Ananta
-            </h1>
+          <div className="flex items-center justify-center mb-6">
+            <img 
+              src="/lovable-uploads/0bfced52-de5f-480f-b199-bd5d951ba6f0.png" 
+              alt="Ananta Logo"
+              className="h-24 md:h-32 w-auto animate-gentle-bounce"
+            />
           </div>
           
           {/* Mission Statement */}
