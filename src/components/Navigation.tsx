@@ -51,7 +51,15 @@ const Navigation = () => {
             className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-6 w-6" /> : (
+              <div className="w-10 h-10 rounded-full border-2 border-current flex items-center justify-center">
+                <div className="flex flex-col space-y-1">
+                  <div className="w-4 h-0.5 bg-current"></div>
+                  <div className="w-4 h-0.5 bg-current"></div>
+                  <div className="w-4 h-0.5 bg-current"></div>
+                </div>
+              </div>
+            )}
           </button>
         </div>
 
