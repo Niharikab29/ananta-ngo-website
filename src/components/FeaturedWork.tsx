@@ -39,9 +39,14 @@ const FeaturedWork = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div ref={headerRef} className="scroll-reveal inline-flex items-center space-x-2 text-primary font-medium mb-4">
-            <span className="text-sm tracking-wide uppercase">01</span>
-            <span className="text-sm tracking-wide uppercase">Our Work</span>
+          <div ref={headerRef} className="scroll-reveal mb-8">
+            <h1 className="font-cabinet text-5xl lg:text-6xl font-light text-green-900 tracking-wide mb-4">
+              ABOUT US
+            </h1>
+            <div className="inline-flex items-center space-x-2 text-primary font-medium">
+              <span className="text-sm tracking-wide uppercase">01</span>
+              <span className="text-sm tracking-wide uppercase">Our Work</span>
+            </div>
           </div>
           
           <p ref={subtitleRef} className="scroll-reveal delay-2 text-lg text-muted-foreground leading-relaxed">

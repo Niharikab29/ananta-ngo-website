@@ -223,9 +223,8 @@ const AboutSection = () => {
                   }}
                 >
                   {block.type === "header" && (
-                    <h1 className="font-cabinet text-5xl lg:text-6xl font-light text-green-900 tracking-wide">
-                      {block.content}
-                    </h1>
+                    // Header moved to FeaturedWork section
+                    <div></div>
                   )}
                   
                   {block.type === "intro" && (
