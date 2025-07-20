@@ -1,11 +1,10 @@
 import { ArrowRight, Heart, Sprout } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.jpg";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Ananta women leaders working together" className="w-full h-full object-cover" />
+        <img src="/lovable-uploads/439cf58e-582e-4431-9d47-5c85e56acd79.png" alt="Ananta children and community members in nature" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-primary-glow/70"></div>
       </div>
       
