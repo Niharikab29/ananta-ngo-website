@@ -4,7 +4,7 @@ const LandingAnimation = () => {
   return (
     <div className="min-h-screen">
       {/* Top Half - Content Area */}
-      <div className="h-[50vh] flex items-center justify-center bg-cream">
+      <div className="h-[50vh] flex items-center justify-center" style={{ backgroundColor: '#f6f3ef' }}>
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
             {/* Main Headline */}
