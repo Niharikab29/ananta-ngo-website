@@ -59,12 +59,12 @@ const LandingAnimation = () => {
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto space-y-8">
             
-            {/* Main Heading - LIVING GREEN style */}
+            {/* Main Heading */}
             <div className={`transition-all duration-800 ease-out delay-300 ${
               showContent ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
             }`}>
-              <h1 className="font-cabinet text-6xl md:text-8xl font-bold tracking-wider mb-6">
-                LIVING GREEN
+              <h1 className="font-cabinet text-4xl md:text-6xl font-light tracking-wide mb-6 leading-tight">
+                A CIRCLE OF WOMEN REGENERATING THE FUTURE — ONE TREE, ONE CHILD, ONE ACT AT A TIME
               </h1>
             </div>
             
