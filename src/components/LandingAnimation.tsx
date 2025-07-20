@@ -93,7 +93,7 @@ const LandingAnimation = () => {
             showContent ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
             <div className="flex flex-col items-center space-y-2">
-              <div className="w-16 h-16 rounded-full border-2 border-white/50 flex items-center justify-center animate-gentle-bounce">
+              <div className="w-16 h-16 rounded-full border-2 border-white/50 flex items-center justify-center animate-gentle-bounce mt-10">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
               <span className="font-cabinet text-white text-sm font-medium tracking-widest uppercase">SCROLL</span>
