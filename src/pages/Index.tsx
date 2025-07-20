@@ -1,15 +1,21 @@
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import FeaturedWork from "@/components/FeaturedWork";
+import ImpactStats from "@/components/ImpactStats";
 import Values from "@/components/Values";
-import Projects from "@/components/Projects";
+import Newsletter from "@/components/Newsletter";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Navigation />
       <Hero />
-      <Projects />
+      <FeaturedWork />
+      <ImpactStats />
       <Values />
+      <Newsletter />
       <CallToAction />
       <Footer />
     </div>
