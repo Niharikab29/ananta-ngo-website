@@ -76,6 +76,12 @@ export default {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
 				'gentle': 'ease-out',
 			},
+			fontFamily: {
+				'cabinet': ['Cabinet Grotesk', 'sans-serif'],
+				'lora': ['Lora', 'serif'],
+				'sans': ['Cabinet Grotesk', 'sans-serif'],
+				'serif': ['Lora', 'serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',

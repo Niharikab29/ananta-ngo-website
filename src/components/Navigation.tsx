@@ -32,7 +32,7 @@ const Navigation = () => {
               <a 
                 key={item.label}
                 href={item.href} 
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="font-cabinet text-foreground hover:text-primary transition-colors font-medium"
               >
                 {item.label}
               </a>
@@ -41,7 +41,7 @@ const Navigation = () => {
 
           {/* CTA Button - Donate styled like David Suzuki */}
           <div className="hidden lg:block">
-            <Button className="bg-red-600 text-white hover:bg-red-700 font-semibold">
+            <Button className="font-cabinet bg-red-600 text-white hover:bg-red-700 font-semibold">
               Donate
             </Button>
           </div>
@@ -63,13 +63,13 @@ const Navigation = () => {
                 <a 
                   key={item.label}
                   href={item.href} 
-                  className="block text-foreground hover:text-primary transition-colors py-2"
+                  className="font-cabinet block text-foreground hover:text-primary transition-colors py-2"
                 >
                   {item.label}
                 </a>
               ))}
               <div className="pt-4">
-                <Button className="w-full bg-red-600 text-white hover:bg-red-700 font-semibold">
+                <Button className="font-cabinet w-full bg-red-600 text-white hover:bg-red-700 font-semibold">
                   Donate
                 </Button>
               </div>

@@ -63,13 +63,13 @@ const LandingAnimation = () => {
             <div className={`transition-all duration-800 ease-out delay-300 ${
               showContent ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
             }`}>
-              <h1 className="text-6xl md:text-8xl font-bold tracking-wider mb-6">
+              <h1 className="font-cabinet text-6xl md:text-8xl font-bold tracking-wider mb-6">
                 LIVING GREEN
               </h1>
             </div>
             
             {/* Subtitle */}
-            <p className={`text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto transition-all duration-800 ease-out delay-500 ${
+            <p className={`font-lora text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto transition-all duration-800 ease-out delay-500 ${
               showContent ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
             }`}>
               A better world made easy! Get tips and resources to live sustainably. Join the growing green living community.
@@ -81,7 +81,7 @@ const LandingAnimation = () => {
             }`}>
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white font-semibold px-12 py-6 text-lg tracking-wider uppercase shadow-soft transition-all duration-300 hover:scale-105"
+                className="font-cabinet bg-primary hover:bg-primary/90 text-white font-medium px-12 py-6 text-lg tracking-wider uppercase shadow-soft transition-all duration-300 hover:scale-105"
               >
                 SIGN UP FOR THE LIVING GREEN MONTHLY DIGEST
               </Button>
@@ -96,7 +96,7 @@ const LandingAnimation = () => {
               <div className="w-16 h-16 rounded-full border-2 border-white/50 flex items-center justify-center animate-gentle-bounce">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
-              <span className="text-white text-sm font-medium tracking-widest uppercase">SCROLL</span>
+              <span className="font-cabinet text-white text-sm font-medium tracking-widest uppercase">SCROLL</span>
             </div>
           </div>
         </div>
