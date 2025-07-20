@@ -48,7 +48,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center hover:bg-foreground/5 transition-colors"
+            className="lg:hidden w-8 h-8 rounded-full border-2 border-foreground flex items-center justify-center hover:bg-foreground/5 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
