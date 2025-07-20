@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,11 +34,27 @@ const Navigation = () => {
   }, [lastScrollY]);
 
   const navItems = [
-    { label: "Forests", href: "/forests" },
-    { label: "Partners", href: "/partners" },
-    { label: "Blog", href: "/blog" },
-    { label: "Our Work", href: "/get-active" },
-    { label: "About", href: "/about" }
+    {
+      label: "About",
+      items: [
+        { label: "About Us", href: "/about" },
+        { label: "Stories & Press", href: "/stories-press" }
+      ]
+    },
+    {
+      label: "Our Work", 
+      items: [
+        { label: "Projects", href: "/projects" },
+        { label: "Reports & Impact", href: "/reports-impact" }
+      ]
+    },
+    {
+      label: "Get Involved",
+      items: [
+        { label: "Partner With Us", href: "/partner" },
+        { label: "Volunteer", href: "/volunteer" }
+      ]
+    }
   ];
 
   return (
@@ -57,13 +79,24 @@ const Navigation = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
-                <a 
-                  key={item.label}
-                  href={item.href} 
-                  className="font-cabinet text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {item.label}
-                </a>
+                <DropdownMenu key={item.label}>
+                  <DropdownMenuTrigger className="font-cabinet text-foreground hover:text-primary transition-colors font-light flex items-center gap-1 outline-none">
+                    {item.label}
+                    <ChevronDown className="h-3 w-3" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-background border border-border shadow-lg rounded-lg p-2 min-w-[180px]">
+                    {item.items.map((subItem) => (
+                      <DropdownMenuItem key={subItem.label} asChild>
+                        <a 
+                          href={subItem.href}
+                          className="font-cabinet text-foreground hover:text-primary transition-colors w-full px-3 py-2 font-light cursor-pointer"
+                        >
+                          {subItem.label}
+                        </a>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               ))}
             </div>
 
@@ -89,13 +122,22 @@ const Navigation = () => {
           <div className="lg:hidden border-t border-border animate-fade-in">
             <div className="py-4 space-y-4">
               {navItems.map((item) => (
-                <a 
-                  key={item.label}
-                  href={item.href} 
-                  className="font-cabinet block text-foreground hover:text-primary transition-colors py-2"
-                >
-                  {item.label}
-                </a>
+                <div key={item.label} className="space-y-2">
+                  <div className="font-cabinet text-foreground font-light text-lg border-b border-border/30 pb-2">
+                    {item.label}
+                  </div>
+                  <div className="pl-4 space-y-2">
+                    {item.items.map((subItem) => (
+                      <a 
+                        key={subItem.label}
+                        href={subItem.href}
+                        className="font-cabinet block text-foreground/80 hover:text-primary transition-colors py-1 font-light"
+                      >
+                        {subItem.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               ))}
               <div className="pt-4">
                 <Button className="font-cabinet w-full bg-red-600 text-white hover:bg-red-700 font-semibold">
