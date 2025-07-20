@@ -97,7 +97,16 @@ const LandingAnimation = () => {
             <div className="flex flex-col items-center space-y-2">
               <div 
                 ref={scrollIndicatorRef}
-                className="scroll-indicator pulse-glow w-16 h-16 rounded-full border-2 border-white/50 flex items-center justify-center animate-gentle-bounce mt-10"
+                onClick={() => {
+                  const nextSection = document.getElementById('featured-work');
+                  if (nextSection) {
+                    nextSection.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }
+                }}
+                className="scroll-indicator pulse-glow w-16 h-16 rounded-full border-2 border-white/50 flex items-center justify-center animate-gentle-bounce mt-10 cursor-pointer hover:border-white/70 hover:scale-110 transition-all duration-300"
               >
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>

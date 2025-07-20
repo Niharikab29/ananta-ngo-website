@@ -43,7 +43,7 @@ const FeaturedWork = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section id="featured-work" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
