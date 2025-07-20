@@ -125,6 +125,22 @@ export default {
 					'50%': {
 						transform: 'translateY(-5px)',
 					}
+				},
+				'subtle-zoom': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+					},
+				},
+				'gentle-pulse': {
+					'0%, 100%': {
+						opacity: '0.2',
+					},
+					'50%': {
+						opacity: '0.4',
+					},
 				}
 			},
 			animation: {
@@ -133,6 +149,8 @@ export default {
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
 				'gentle-bounce': 'gentle-bounce 2s ease-in-out infinite',
+				'subtle-zoom': 'subtle-zoom 20s ease-in-out infinite',
+				'gentle-pulse': 'gentle-pulse 4s ease-in-out infinite',
 			}
 		}
 	},

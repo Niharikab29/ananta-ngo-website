@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
+import LandingAnimation from "@/components/LandingAnimation";
 import FeaturedWork from "@/components/FeaturedWork";
 import ImpactStats from "@/components/ImpactStats";
 import Values from "@/components/Values";
@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
+      <LandingAnimation />
       <FeaturedWork />
       <ImpactStats />
       <Values />
