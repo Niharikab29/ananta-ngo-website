@@ -6,14 +6,16 @@ const LandingAnimation = () => {
       {/* Top Half - Content Area */}
       <div className="h-[50vh] flex items-center justify-center" style={{ backgroundColor: '#f6f3ef' }}>
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto space-y-8">
-            {/* Main Headline */}
-            <h1 className="font-cabinet text-4xl md:text-6xl lg:text-7xl font-light tracking-wide leading-tight text-foreground">
-              Reweaving the fabric of local life through{' '}
-              <em className="text-primary font-medium">ecology</em>,{' '}
-              <em className="text-primary font-medium">education</em>, and{' '}
-              <em className="text-primary font-medium">intergenerational leadership</em>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {/* Main Header */}
+            <h1 className="font-cabinet text-5xl md:text-7xl lg:text-8xl font-light tracking-wide leading-tight text-foreground">
+              WOMEN GROWING FUTURES
             </h1>
+            
+            {/* Sub Header */}
+            <p className="font-lora text-xl md:text-2xl leading-relaxed text-muted-foreground max-w-3xl mx-auto">
+              A circle of women regenerating the future — one tree, one child, one act of leadership at a time
+            </p>
             
             {/* CTA Button */}
             <div className="pt-6">
