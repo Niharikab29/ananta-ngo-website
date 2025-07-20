@@ -4,11 +4,11 @@ const LandingAnimation = () => {
   return (
     <div className="min-h-screen">
       {/* Top Half - Content Area */}
-      <div className="h-[50vh] flex items-center justify-center" style={{ backgroundColor: '#f6f3ef' }}>
+      <div className="h-[50vh] flex items-center justify-center bg-cream">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
             {/* Main Headline */}
-            <h1 className="font-cabinet text-4xl md:text-6xl lg:text-7xl font-light tracking-wide leading-tight text-gray-900">
+            <h1 className="font-cabinet text-4xl md:text-6xl lg:text-7xl font-light tracking-wide leading-tight text-foreground">
               Reweaving the fabric of local life through{' '}
               <em className="text-primary font-medium">ecology</em>,{' '}
               <em className="text-primary font-medium">education</em>, and{' '}
@@ -19,7 +19,7 @@ const LandingAnimation = () => {
             <div className="pt-6">
               <Button 
                 size="lg" 
-                className="bg-background text-foreground hover:bg-background/90 rounded-full px-8 py-6 text-lg font-medium shadow-lg border border-border/20 transition-all duration-300 hover:scale-105"
+                className="bg-white text-foreground hover:bg-white/90 rounded-full px-8 py-6 text-lg font-medium shadow-soft border border-border/20 transition-all duration-300 hover:scale-105"
               >
                 Learn More
               </Button>
