@@ -3,9 +3,6 @@ import { useContentPulse } from "@/hooks/usePulsatingScroll";
 import { ArrowRight, Leaf, GraduationCap, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import forestImage from "@/assets/forest-image.jpg";
-import learningImage from "@/assets/learning-image.jpg";
-import womenEmpowermentImage from "@/assets/women-empowerment.jpg";
 const FeaturedWork = () => {
   const headerRef = useScrollReveal<HTMLDivElement>();
   const titleRef = useScrollReveal<HTMLHeadingElement>();
@@ -14,7 +11,6 @@ const FeaturedWork = () => {
     id: "01",
     title: "Greening Our Cities",
     description: "Creating urban forests and green spaces that heal both the environment and communities. Through tree plantation drives and Miyawaki forests, we're transforming urban landscapes.",
-    image: forestImage,
     icon: Leaf,
     link: "#greening",
     stats: "1000+ Trees Planted"
@@ -22,7 +18,6 @@ const FeaturedWork = () => {
     id: "02",
     title: "Reimagining Learning",
     description: "Revolutionary education through mobile learning labs and systems-thinking workshops. We're creating playful curricula that makes learning feel like freedom.",
-    image: learningImage,
     icon: GraduationCap,
     link: "#learning",
     stats: "15+ Schools Reached"
@@ -30,7 +25,6 @@ const FeaturedWork = () => {
     id: "03",
     title: "Empowering Women & Youth",
     description: "Building safe spaces for women and youth to develop leadership skills, digital literacy, and confidence. Local leadership development for community transformation.",
-    image: womenEmpowermentImage,
     icon: Users,
     link: "#empowerment",
     stats: "500+ Lives Touched"
@@ -40,7 +34,7 @@ const FeaturedWork = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div ref={headerRef} className="scroll-reveal mb-8">
-            <h1 className="font-cabinet text-5xl lg:text-6xl font-light text-green-900 tracking-wide mb-4">
+            <h1 className="font-cabinet text-5xl lg:text-6xl font-light text-foreground tracking-wide mb-4">
               ABOUT US
             </h1>
             <div className="inline-flex items-center space-x-2 text-primary font-medium">

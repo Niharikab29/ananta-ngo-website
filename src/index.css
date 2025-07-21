@@ -8,45 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Natural, earthy color palette for Ananta */
-    --background: 42 44% 98%;
-    --foreground: 160 15% 15%;
+    /* Simplified 4-color design system */
+    --background: 60 20% 98%; /* #FBFAF5 */
+    --foreground: 0 0% 0%; /* Pure black */
 
-    --card: 0 0% 100%;
-    --card-foreground: 160 15% 15%;
+    --card: 60 20% 98%; /* #FBFAF5 */
+    --card-foreground: 0 0% 0%; /* Black */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 160 15% 15%;
+    --popover: 60 20% 98%; /* #FBFAF5 */
+    --popover-foreground: 0 0% 0%; /* Black */
 
-    /* Forest green primary */
-    --primary: 142 76% 36%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 142 65% 45%;
+    /* Primary - using black for strong contrast */
+    --primary: 0 0% 0%; /* Black */
+    --primary-foreground: 60 20% 98%; /* #FBFAF5 */
 
-    /* Warm earth secondary */
-    --secondary: 32 60% 85%;
-    --secondary-foreground: 160 20% 25%;
+    /* Secondary light green */
+    --secondary: 120 25% 92%; /* Light sage */
+    --secondary-foreground: 0 0% 0%; /* Black */
 
-    /* Soft sage muted */
-    --muted: 120 25% 92%;
-    --muted-foreground: 160 12% 45%;
+    /* Muted light green */
+    --muted: 120 25% 92%; /* Light sage */
+    --muted-foreground: 0 0% 0%; /* Black */
 
-    /* Golden accent */
-    --accent: 45 85% 75%;
-    --accent-foreground: 160 25% 20%;
+    /* Accent - same as primary */
+    --accent: 0 0% 0%; /* Black */
+    --accent-foreground: 60 20% 98%; /* #FBFAF5 */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Red for errors */
+    --destructive-foreground: 60 20% 98%; /* #FBFAF5 */
 
-    --border: 120 20% 88%;
-    --input: 120 20% 88%;
-    --ring: 142 76% 36%;
+    --border: 120 25% 92%; /* Light sage */
+    --input: 120 25% 92%; /* Light sage */
+    --ring: 0 0% 0%; /* Black */
 
-    /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 65% 45%));
-    --gradient-subtle: linear-gradient(180deg, hsl(120 25% 97%), hsl(120 25% 92%));
-    --shadow-soft: 0 4px 20px -4px hsl(142 76% 36% / 0.15);
-    --shadow-card: 0 2px 12px -2px hsl(160 15% 15% / 0.08);
+    /* Simplified shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(0 0% 0% / 0.08);
     
     /* Animation tokens */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -55,23 +52,16 @@ All colors MUST be HSL.
     --radius: 0.5rem;
     
     /* Navigation background */
-    --nav-background: 38 26% 95%; /* #f6f3ef */
+    --nav-background: 60 20% 98%; /* #FBFAF5 */
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 60 20% 98%; /* #FBFAF5 */
+    --sidebar-foreground: 0 0% 0%; /* Black */
+    --sidebar-primary: 0 0% 0%; /* Black */
+    --sidebar-primary-foreground: 60 20% 98%; /* #FBFAF5 */
+    --sidebar-accent: 120 25% 92%; /* Light sage */
+    --sidebar-accent-foreground: 0 0% 0%; /* Black */
+    --sidebar-border: 120 25% 92%; /* Light sage */
+    --sidebar-ring: 0 0% 0%; /* Black */
   }
 
   .dark {
@@ -194,6 +184,18 @@ All colors MUST be HSL.
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Smooth scroll animation optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Optimize for animations */
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Pulsating animation system */

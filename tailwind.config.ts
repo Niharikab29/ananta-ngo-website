@@ -63,16 +63,9 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'nav-background': 'hsl(var(--nav-background))',
-				'forest-dark': 'hsl(140 30% 15%)',
-				'forest-medium': 'hsl(140 25% 35%)',
-				'sage': 'hsl(95 25% 55%)',
-				'sage-dark': 'hsl(95 30% 35%)',
-				'cream': 'hsl(45 15% 97%)'
+				'nav-background': 'hsl(var(--nav-background))'
 			},
 			backgroundImage: {
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-subtle': 'var(--gradient-subtle)',
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			},
 			boxShadow: {
