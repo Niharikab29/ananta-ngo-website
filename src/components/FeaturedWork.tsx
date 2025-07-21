@@ -51,18 +51,36 @@ const FeaturedWork = () => {
 
         {/* Projects Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {projects.map((project, index) => {
-          const cardRef = useScrollReveal<HTMLDivElement>();
-          const pulseRef = useContentPulse<HTMLDivElement>();
-          return <Card key={project.id} ref={el => {
-            cardRef.current = el;
-            pulseRef.current = el;
-          }} className={`content-pulse scroll-reveal-scale delay-${index + 1} group overflow-hidden border-0 shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-2`}>
+          {projects.map((project, index) => (
+            <Card 
+              key={project.id} 
+              className={`scroll-reveal-scale delay-${index + 1} group overflow-hidden border-0 shadow-soft hover:shadow-lg transition-all duration-300 hover:-translate-y-2`}
+            >
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <project.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <span className="text-sm font-medium text-primary">{project.id}</span>
+                    <h3 className="text-xl font-semibold text-foreground mt-1">{project.title}</h3>
+                  </div>
+                </div>
                 
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {project.description}
+                </p>
                 
-                
-              </Card>;
-        })}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-primary">{project.stats}</span>
+                  <Button variant="ghost" size="sm" className="group-hover:bg-primary/10">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Bottom CTA */}
