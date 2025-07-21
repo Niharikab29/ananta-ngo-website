@@ -1,11 +1,21 @@
 import Navigation from "@/components/Navigation";
-import LandingAnimation from "@/components/LandingAnimation";
+import ScrollHero from "@/components/ScrollHero";
+import FeaturedWork from "@/components/FeaturedWork";
+import ImpactStats from "@/components/ImpactStats";
+import Values from "@/components/Values";
+import CallToAction from "@/components/CallToAction";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <LandingAnimation />
+      <ScrollHero />
+      <FeaturedWork />
+      <ImpactStats />
+      <Values />
+      <CallToAction />
+      <Footer />
     </div>
   );
 };
