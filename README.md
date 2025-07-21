@@ -1,8 +1,10 @@
-# Welcome to your Lovable project
+# Ananta NGO Website
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/c0d2462c-d1f3-490d-b871-5d1290210f55
+
+**Description**: A modern, responsive website for Ananta NGO showcasing their work in ecology, education, and community empowerment.
 
 ## How can I edit this code?
 
